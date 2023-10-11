@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Card from './components/Card';
 import './styles/main.scss';
 
 function App() {
@@ -6,7 +7,12 @@ function App() {
     document.body.classList.toggle('dark');
   }
 
-  return <button onClick={toggleTheme}>Theme Toggle</button>;
+  return (
+    <>
+      <button onClick={toggleTheme}>Theme Toggle</button>
+      <Card />
+    </>
+  );
 }
 
 export default App;
