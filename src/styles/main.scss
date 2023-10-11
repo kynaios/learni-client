@@ -1,0 +1,11 @@
+@import "./variables.scss";
+body {
+  --bg-color: #{$lg-primary};
+  --font-color: #{$lg-secondary};
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  &.dark {
+    --bg-color: #{$dk-primary};
+    --font-color: #{$dk-secondary};
+  }
+}
