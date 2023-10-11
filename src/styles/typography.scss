@@ -1,0 +1,8 @@
+input,
+span {
+  font-family: 'Nunito Sans', sans-serif;
+  &.l {
+    font-size: $fs-l;
+    color: var(--font-color);
+  }
+}
