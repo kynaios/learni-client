@@ -1,16 +1,17 @@
 table {
   border-collapse: collapse;
   width: 100%;
-}
+  overflow: auto;
 
-td,
-th {
-  border: 1px solid var(--font-color);
-  text-align: center;
-  padding: 8px;
-}
+  & td,
+  th {
+    border: 1px solid var(--font-color);
+    text-align: center;
+    padding: 8px;
+  }
 
-tr:nth-child(even) {
-  background-color: var(--font-color);
-  color: var(--bg-color);
+  & tr:nth-child(even) {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+  }
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Card from './components/Card';
 import './styles/main.scss';
+import FlashCardsTable from './components/FlashCardsTable';
 
 function App() {
   function toggleTheme() {
@@ -10,7 +11,10 @@ function App() {
   return (
     <>
       <button onClick={toggleTheme}>Theme Toggle</button>
-      <Card />
+      <div className='add-flash-card-container'>
+        <Card />
+        <FlashCardsTable />
+      </div>
     </>
   );
 }

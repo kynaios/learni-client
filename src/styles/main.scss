@@ -17,3 +17,17 @@ body {
     --box-shadow: 10px 13px 39px -18px rgba(227, 220, 194, 1);
   }
 }
+
+.add-flash-card-container {
+  display: grid;
+
+  @include desktop {
+    grid-template-columns: 500px 1fr;
+    column-gap: 2em;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+}
