@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './typography.scss';
+@import './mixins.scss';
 
 body {
   --bg-color: #{$lg-primary};
