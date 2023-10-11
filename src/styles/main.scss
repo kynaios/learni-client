@@ -1,12 +1,18 @@
 @import './variables.scss';
 @import './typography.scss';
+
 body {
   --bg-color: #{$lg-primary};
   --font-color: #{$lg-secondary};
+  --bg-color-300: #{$lg-primary-300};
+  --box-shadow: 10px 13px 39px -18px rgba(65, 58, 57, 1);
   background-color: var(--bg-color);
   color: var(--font-color);
+
   &.dark {
     --bg-color: #{$dk-primary};
     --font-color: #{$dk-secondary};
+    --bg-color-300: #{$dk-primary-300};
+    --box-shadow: 10px 13px 39px -18px rgba(227, 220, 194, 1);
   }
 }
