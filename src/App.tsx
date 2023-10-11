@@ -1,8 +1,13 @@
 import { useState } from 'react'
+import './styles/main.scss'
 
 function App() {
 
-  return <button>Hello</button>
+  function toggleTheme() {
+    document.body.classList.toggle('dark')
+  }
+
+  return <button onClick={toggleTheme}>Theme Toggle</button>
 }
 
 export default App
