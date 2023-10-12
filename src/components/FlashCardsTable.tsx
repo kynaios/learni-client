@@ -1,6 +1,7 @@
 import '../styles/flash-cards-table.scss';
+import { Flashcards } from '../types';
 
-function FlashCardsTable() {
+function FlashCardsTable({ flashcards }: Flashcards) {
   return (
     <table className='flash-cards-table l'>
       <thead>
@@ -11,111 +12,15 @@ function FlashCardsTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>oi</td>
-          <td>Actions</td>
-        </tr>
+        {flashcards.map((f, i) => {
+          return (
+            <tr key={i}>
+              <td>{f.word}</td>
+              <td>{f.translation}</td>
+              <td>Actions</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
