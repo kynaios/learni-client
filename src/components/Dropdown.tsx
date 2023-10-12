@@ -32,6 +32,7 @@ function Dropdown({ setLanguage }) {
 
           setTargetLanguages(languages);
           setSelected(languages[0].name);
+          setLanguage(languages[0].code);
         } else {
           console.error(`Error: ${response.status}`);
         }
