@@ -20,7 +20,7 @@
       font-size: $fs-md;
       border: none;
       cursor: pointer;
-      width: 92px;
+      width: 107px;
 
       &:hover,
       &:focus {
@@ -34,7 +34,7 @@
       display: none;
       position: absolute;
       background-color: #f6f6f6;
-      min-width: 90px;
+      min-width: 105px;
       overflow: auto;
       z-index: 1;
       border: 1px solid var(--font-color);

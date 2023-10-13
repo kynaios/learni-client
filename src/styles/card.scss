@@ -7,7 +7,7 @@
   justify-content: center;
   max-width: 30em;
   height: 20em;
-  gap: 2em;
+  gap: 1.25em;
   border-radius: 1em;
   background-color: var(--bg-color-300);
   box-shadow: var(--box-shadow);
@@ -26,5 +26,16 @@
 
   & > .translation {
     padding: 0.5rem;
+  }
+
+  & > .add-button {
+    width: 80%;
+    height: 40px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-size: var(--fs-s);
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5em;
   }
 }

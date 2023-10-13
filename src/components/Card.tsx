@@ -52,7 +52,9 @@ function Card({ addFlashcard }) {
       <Dropdown setLanguage={setLanguage} />
       <input onChange={handleWorld} value={word} className='word-input l' />
       <span className='translation l'>{translation}</span>
-      <button onClick={() => addFlashcard({ word, translation })}>Add</button>
+      <button onClick={() => addFlashcard({ word, translation })} className='add-button'>
+        Add
+      </button>
     </div>
   );
 }
