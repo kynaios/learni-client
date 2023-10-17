@@ -29,7 +29,7 @@ function App() {
       <button onClick={toggleTheme}>Theme Toggle</button>
       <div className='add-flash-card-container'>
         <Card addFlashcard={addFlashCard} />
-        <FlashCardsTable flashcards={flashcards} />
+        <FlashCardsTable flashcards={flashcards} setFlashcards={setFlashcards} />
       </div>
     </>
   );
