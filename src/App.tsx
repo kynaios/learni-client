@@ -3,6 +3,7 @@ import Card from './components/Card';
 import './styles/main.scss';
 import FlashCardsTable from './components/FlashCardsTable';
 import { Flashcard } from './types';
+import axios from 'axios';
 
 function App() {
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
@@ -11,8 +12,16 @@ function App() {
     document.body.classList.toggle('dark');
   }
 
-  function addFlashCard(card: Flashcard) {
-    setFlashcards([card, ...flashcards]);
+  async function addFlashCard(card: Flashcard) {
+    const res = await axios.post('http://localhost:8080/api/v1/flashCardBag/create', card);
+
+    if (res.status === 200) {
+      const flashCardsBagRes = await axios.get('http://localhost:8080/api/v1/flashCardBag/all');
+
+      if (flashCardsBagRes.status === 200) {
+        setFlashcards(flashCardsBagRes.data);
+      }
+    }
   }
 
   return (
