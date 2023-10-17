@@ -39,6 +39,18 @@ function FlashCardsTable({ flashcards, setFlashcards }: FlashcardsTableProps) {
     }
   }
 
+  async function deleteFlashcard(id: string) {
+    const res = await axios.delete(`http://localhost:8080/api/v1/flashCardBag/delete/${id}`);
+
+    if (res.status === 200) {
+      const flashcardsRes = await axios.get('http://localhost:8080/api/v1/flashCardBag/all');
+
+      if (flashcardsRes.status === 200) {
+        setFlashcards(flashcardsRes.data);
+      }
+    }
+  }
+
   return (
     <table className='flash-cards-table l'>
       <thead>
@@ -81,7 +93,9 @@ function FlashCardsTable({ flashcards, setFlashcards }: FlashcardsTableProps) {
                     Edit
                   </button>
                 )}
-                <button className='action-button'>Delete</button>
+                <button onClick={() => deleteFlashcard(f.id)} className='action-button'>
+                  Delete
+                </button>
               </td>
             </tr>
           );
