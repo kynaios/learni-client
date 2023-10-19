@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from './DropdownLanguage';
 import axios from 'axios';
 import '../styles/card.scss';
 

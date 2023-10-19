@@ -21,6 +21,7 @@
       border: none;
       cursor: pointer;
       width: 107px;
+      }
 
       &:hover,
       &:focus {
@@ -31,28 +32,31 @@
     }
 
     & > .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f6f6f6;
-      min-width: 105px;
-      overflow: auto;
-      z-index: 1;
-      border: 1px solid var(--font-color);
+      &-decks,
+      &-languages {
+        display: none;
+        position: absolute;
+        background-color: #f6f6f6;
+        min-width: 105px;
+        overflow: auto;
+        z-index: 1;
+        border: 1px solid var(--font-color);
 
-      &.show {
-        display: block;
-      }
+        &.show {
+          display: block;
+        }
 
-      & > .option-button {
-        color: var(--font-color);
-        width: 100%;
-        background: transparent;
-        border: none;
-        padding: 12px 16px;
-        display: block;
+        & > .option-button {
+          color: var(--font-color);
+          width: 100%;
+          background: transparent;
+          border: none;
+          padding: 12px 16px;
+          display: block;
 
-        &:hover {
-          background-color: var(--bg-color);
+          &:hover {
+            background-color: var(--bg-color);
+          }
         }
       }
     }

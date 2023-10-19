@@ -8,7 +8,7 @@ function Dropdown({ setLanguage }) {
   const [selected, setSelected] = useState<string>('');
 
   function toggleOpenDropdown() {
-    const dropdownContent = document.querySelector('.dropdown-content');
+    const dropdownContent = document.querySelector('.dropdown-content-languages');
 
     if (dropdownContent) {
       dropdownContent.classList.toggle('show');
@@ -51,7 +51,7 @@ function Dropdown({ setLanguage }) {
         <button onClick={toggleOpenDropdown} className='dropbtn'>
           {selected}
         </button>
-        <div className='dropdown-content'>
+        <div className='dropdown-content-languages'>
           {targetLanguages.map((lang) => {
             return (
               <button
