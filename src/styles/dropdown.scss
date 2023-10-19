@@ -21,6 +21,10 @@
       border: none;
       cursor: pointer;
       width: 107px;
+      height: 40px;
+
+      &[variant='deck'] {
+        background-color: var(--bg-color-300);
       }
 
       &:hover,

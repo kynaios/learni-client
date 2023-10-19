@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.collection-controller-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+
+  & > button {
+    height: 40px;
+    background-color: var(--bg-color-300);
+    border: none;
+    padding: 0.5em;
+    align-self: end;
+    font-size: $fs-md;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+}
