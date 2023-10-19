@@ -4,6 +4,7 @@ import './styles/main.scss';
 import FlashCardsTable from './components/FlashCardsTable';
 import { Flashcard } from './types';
 import axios from 'axios';
+import CollectionController from './components/CollectionController';
 
 function App() {
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
@@ -29,6 +30,7 @@ function App() {
       <button onClick={toggleTheme}>Theme Toggle</button>
       <div className='add-flash-card-container'>
         <Card addFlashcard={addFlashCard} />
+        <CollectionController flashcards={flashcards} setFlashcards={setFlashcards} />
         <FlashCardsTable flashcards={flashcards} setFlashcards={setFlashcards} />
       </div>
     </>
