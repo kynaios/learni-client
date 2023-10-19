@@ -20,3 +20,16 @@ interface FlashcardsTableProps {
   flashcards: Flashcards;
   setFlashcards: Dispatch<SetStateAction<Flashcards>>;
 }
+
+interface Deck {
+  id: string;
+  name: string;
+}
+
+interface Decks {
+  decks: Deck[];
+}
+
+interface CollectionController {
+  flashcards: Flashcards;
+}
