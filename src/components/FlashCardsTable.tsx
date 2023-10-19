@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import '../styles/flash-cards-table.scss';
 import { FlashcardsTableProps, Flashcard } from '../types';
 import axios from 'axios';
@@ -50,6 +50,18 @@ function FlashCardsTable({ flashcards, setFlashcards }: FlashcardsTableProps) {
       }
     }
   }
+
+  useEffect(() => {
+    async function fetchBag() {
+      const flashcardsRes = await axios.get('http://localhost:8080/api/v1/flashCardBag/all');
+
+      if (flashcardsRes.status === 200) {
+        setFlashcards(flashcardsRes.data);
+      }
+    }
+
+    fetchBag();
+  }, []);
 
   return (
     <table className='flash-cards-table l'>
