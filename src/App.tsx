@@ -5,6 +5,7 @@ import FlashCardsTable from './components/FlashCardsTable';
 import { Flashcard } from './types';
 import axios from 'axios';
 import CollectionController from './components/CollectionController';
+import NewDeckDialog from './components/NewDeckDialog';
 
 function App() {
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
