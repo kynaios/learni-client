@@ -3,9 +3,11 @@ import Dropdown from './DropdownDeck';
 import { Deck, FlashcardsTableProps } from '../types';
 import '../styles/collection-controller.scss';
 import axios from 'axios';
+import NewDeckDialog from './NewDeckDialog';
 
 function CollectionController({ flashcards, setFlashcards }: FlashcardsTableProps) {
   const [deck, setDeck] = useState<Deck>();
+  const [toggleDialog, setToggleDialog] = useState<boolean>(false);
 
   async function addToDeck() {
     flashcards.forEach(async (flashcard) => {
@@ -26,12 +28,20 @@ function CollectionController({ flashcards, setFlashcards }: FlashcardsTableProp
     });
   }
 
+  function toggleDialogOpen() {
+    setToggleDialog(!toggleDialog);
+    window.dialog.showModal();
+  }
+
   return (
-    <div className='collection-controller-container'>
-      <Dropdown setDeck={setDeck} />
-      <button onClick={addToDeck}>Add to deck</button>
-      <button>Create new deck</button>
-    </div>
+    <>
+      <div className='collection-controller-container'>
+        <Dropdown setDeck={setDeck} />
+        <button onClick={addToDeck}>Add to deck</button>
+        <button onClick={toggleDialogOpen}>Create new deck</button>
+        <NewDeckDialog open={toggleDialog} />
+      </div>
+    </>
   );
 }
 
